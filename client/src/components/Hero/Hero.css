@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+
+.Hero {
+    height: 100vh;
+    display: flex;
+    background: url("https://cdn.wallpapersafari.com/57/87/2tBS8g.jpg") center center/cover no-repeat;
+   justify-content: space-between;
+}
+
+
+
+#main {
+    font-size: 60px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    color: #374b5c;
+    line-break: auto;
+    margin-bottom: 20px;
+}
+.mainText{
+    align-self: center;
+    margin-left: 20%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+  .float {  
+    animation-name: ani-float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+  }
+  
+  @keyframes ani-float {
+    0% { transform: translate(0,  0px); }
+    50% { transform: translate(0, 15px); }
+    100% { transform: translate(0, -0px); }    
+  }
+.animatedHkeya {
+    width: 50%;
+    position: relative;
+    left: 0;
+    align-self: center;
+    
+    
+}
+.animatedHkeya svg{
+   
+    width: 400px;
+    height: 500px;
+    
+}
+
+#search {
+    background-color: #dad9d9ab;
+    border: 0.5px solid #374b5c ;
+    height: 8vh;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 0px;
+    margin-right: 20px;
+    margin-left: -20px;
+    display: flex;
+}
+#searchInside {
+    
+    align-self: center;
+    justify-self: center;
+    background-color: #ffffffe3;
+    height: 7vh;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    align-items:center ;
+    justify-items: center;
+}
+input {
+    border: 0px;
+    background-color: transparent;
+    height: 7vh;
+    width: 80%;
+    margin-left:10px;
+}
+#searchInside i {
+    margin-left: 10px;
+}
+#yallah {
+    background-color: #f87f59;
+    height: 7vh;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+
+				
