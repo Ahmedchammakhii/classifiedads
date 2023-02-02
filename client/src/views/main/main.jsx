@@ -1,10 +1,10 @@
 import React from 'react'
 import Navbar from '../../components/navbar/navbar.jsx'
 import Hero from "../../components/Hero/Hero.jsx"
-const main = () => {
+const main = (props) => {
   return (
     <div>
-      <Navbar/>
+      <Navbar user={props.user} connected={props.connected}/>
     <Hero/>
     </div>
   )

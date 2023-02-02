@@ -11,16 +11,17 @@ import Detail from "./views/ad details/detail.jsx"
 import User from "./views/user/user.jsx"
 import Add from './views/addAd/add.jsx'
 const App = () => {
- 
+ const [connected , setConnected]=useState(false)
+ const [user,setUser] = useState()
   return (
 <Routes>
-<Route  path='/' element ={<Main/>}/>
-<Route path='/register' element={<Signup/>}/>
-<Route path='/singin' element={<Signin/>}/>
-<Route path='/ads' element={<Ads/>}/>
-<Route path='/ad/:id' element={<Detail/>}/>
-<Route path='/user/:id' element={<User/>}/>
-<Route path='/addAd' element={<Add/>}/>
+<Route  path='/' element ={<Main user = {user} connected={connected}/>}/>
+<Route path='/register' element={<Signup />}/>
+<Route path='/singin' element={<Signin setConnected={setConnected} setUser={setUser} />}/>
+<Route path='/ads' element={<Ads user = {user} connected={connected}  />}/>
+<Route path='/ads/:id' element={<Detail user = {user} connected={connected}  />}/>
+<Route path='/user/:id' element={<User connected={connected} user={user} />}/>
+<Route path='/addAd' element={<Add connected={connected} user={user} />}/>
 </Routes>
   )
 }
