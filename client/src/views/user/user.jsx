@@ -5,7 +5,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import Navbar from '../../components/navbar/navbar.jsx'
-const user = () => {
+const user = (props) => {
   const path = useLocation().pathname.split("/")
   const[name,setName]=useState("")
   const[password,setPassword]=useState("")
@@ -21,11 +21,12 @@ const user = () => {
     if (name.length==0) setName(user.name)
     if (password.length==0) setPassword(user.password)
     if (phone.length==0) setPhone(user.phone)
-    axios.put(`http://127.0.0.1:3000/api/users/${user.idusers}`,{name:name,password:password,email:user.email,phone:user.phone}).then(res=>navigate(`/`))
+    axios.put(`http://127.0.0.1:3000/api/users/${user.idusers}`,{
+      name:name,password:password,email:user.email,phone:user.phone}).then(res=>navigate(`/`))
   }
   return (
-    <div>
-      <Navbar/>
+    <div> <Navbar user = {props.user} connected={props.connected} /> 
+    
       <div className="avatar" style={{width:"100%",display:"flex"}}>
                 <Avatar sx={{ width:"250px" , height:"250px",bgcolor: orange["500"],margin:"100px",fontSize:"40px" }}>{user.name}</Avatar>
     <div className="inputs" style={{width:"100%",margin:"100px"}}>

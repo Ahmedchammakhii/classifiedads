@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import "./navbar.css"
 const navbar = (props) => {
   return (
+    
     <div className='navbar'>
       <div className="logo">
       <Link style={{color:"#374b5c" , marginRight:"20px",listStyle:"none",textDecoration:"none"}} to="/" ><img id='logo' src="https://pngimg.com/d/waze_PNG6.png" alt="logo" /></Link> 

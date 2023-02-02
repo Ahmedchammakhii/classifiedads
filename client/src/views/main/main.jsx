@@ -5,7 +5,7 @@ const main = (props) => {
   return (
     <div>
       <Navbar user={props.user} connected={props.connected}/>
-    <Hero/>
+    <Hero setSearch={props.setSearch}/>
     </div>
   )
 }

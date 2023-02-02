@@ -25,7 +25,7 @@ const signup = () => {
     <div>
     <div className='singup'>
       <div id="card">
-        <h2>Register now ! </h2>
+        <h2 style={{color:"black" ,textShadow:"0px 0px 0px "}}>Register now ! </h2>
         <div className="name" >
         <h3>your username  : </h3>
         <input onChange={e=>setName(e.target.value)} placeholder='username ..'></input>
@@ -43,7 +43,7 @@ const signup = () => {
         <input onChange={e=>setPhone(e.target.value)}  placeholder='phone ..'></input>
         </div>
         <div className="stillnot">
-          <p>you already have an account ? <span><Link style={{listStyle:"none",textDecoration:"none",color:"white"}} to="/signin">singin</Link></span></p>
+          <p>you already have an account ? <span><Link style={{listStyle:"none",textDecoration:"none",color:"orange"}} to="/singin">singin</Link></span></p>
         </div>
         <div className='submitb'>
           <button onClick ={e=>addUser()} id="signinbtn">sign up </button>

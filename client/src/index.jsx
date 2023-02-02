@@ -13,15 +13,18 @@ import Add from './views/addAd/add.jsx'
 const App = () => {
  const [connected , setConnected]=useState(false)
  const [user,setUser] = useState()
+ const [search,setSearch]=useState("")
   return (
 <Routes>
-<Route  path='/' element ={<Main user = {user} connected={connected}/>}/>
+<Route  path='/' element ={<Main user = {user} connected={connected} setSearch={setSearch}/>}/>
 <Route path='/register' element={<Signup />}/>
 <Route path='/singin' element={<Signin setConnected={setConnected} setUser={setUser} />}/>
-<Route path='/ads' element={<Ads user = {user} connected={connected}  />}/>
+<Route path='/ads' element={<Ads user = {user} connected={connected} search={search} setSearch={setSearch} />}/>
 <Route path='/ads/:id' element={<Detail user = {user} connected={connected}  />}/>
 <Route path='/user/:id' element={<User connected={connected} user={user} />}/>
 <Route path='/addAd' element={<Add connected={connected} user={user} />}/>
+<Route path='/ads/user/:id' element={<Ads connected={connected} user={user}  />}/>
+
 </Routes>
   )
 }

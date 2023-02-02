@@ -1,17 +1,24 @@
 import { Fingerprint } from '@mui/icons-material'
-import { IconButton } from '@mui/material'
+import { IconButton , Button} from '@mui/material'
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React, { useEffect} from 'react'
 import {useState} from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation,useNavigate } from 'react-router-dom'
 import Navbar from '../../components/navbar/navbar.jsx'
+
 const detail = (props) => {
   const loc = useLocation().pathname.split("")
    const [toogleinfo,setToggle]=useState(false)
+  const navigate = useNavigate()
    const [ad,setAd]=useState({})
    useEffect(()=>{ 
+    console.log(props.user);
    axios.get(`http://127.0.0.1:3000/api/ads/${loc[loc.length-1]}`).then(res=>setAd(res.data[0]))
    },[])
+   const deleteitem = ()=> {
+    axios.delete(`http://127.0.0.1:3000/api/ads/${loc[loc.length-1]}`).then(res=>navigate("/ads"))
+  }
+   
   return (
     <div>
       
@@ -36,6 +43,12 @@ const detail = (props) => {
   <h2>author name : {ad.author} </h2>
   <h2>mobile phone : {ad.phone} </h2>
 </>
+}
+{props.user.idusers===ad.authorId && 
+<div>
+  <Button style={{color:"red"}} onClick={e=>deleteitem()} >delete</Button>
+
+  </div>
 }
       </div>
       </div>

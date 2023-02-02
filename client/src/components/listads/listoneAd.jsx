@@ -6,11 +6,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+import { blueGrey, orange } from '@mui/material/colors';
 
 const listoneAd = ({ad}) => {
   return (
     <div>
-       <Card sx={{ width: 250 , marginLeft: 10 }}>
+       <Card sx={{ width: 250 , marginLeft: 10 ,marginTop: 10, backgroundColor : orange[200]}} >
       <CardMedia
         component="img"
         alt="green iguana"
@@ -25,7 +26,7 @@ const listoneAd = ({ad}) => {
          {ad.description}</Typography>
       </CardContent>
       <CardActions>
-        <Button size="small"><Link to={`/ads/${ad.idads}`} style={{color:"orange",listStyle:"none",textDecoration:"none"}}>Learn More</Link></Button>
+        <Button size="small"><Link to={`/ads/${ad.idads}`} style={{color:"white",listStyle:"none",textDecoration:"none"}}>Learn More</Link></Button>
       </CardActions>
     </Card>
     </div>

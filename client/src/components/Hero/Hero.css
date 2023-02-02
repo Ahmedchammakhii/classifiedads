@@ -19,7 +19,7 @@
 }
 .mainText{
     align-self: center;
-    margin-left: 20%;
+    margin-left: 15%;
     margin-top: 0px;
     margin-bottom: 0px;
     
@@ -45,9 +45,9 @@
     
     
 }
-.animatedHkeya svg{
+.animatedHkeya img{
    
-    width: 400px;
+    width: 600px;
     height: 500px;
     
 }
