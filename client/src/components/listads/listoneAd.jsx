@@ -11,7 +11,7 @@ import { blueGrey, orange } from '@mui/material/colors';
 const listoneAd = ({ad}) => {
   return (
     <div>
-       <Card sx={{ width: 250 , marginLeft: 10 ,marginTop: 10, backgroundColor : orange[200]}} >
+       <Card sx={{ width: 250 , marginLeft: 10 ,marginTop: 10, backgroundColor : orange["A700"]}} >
       <CardMedia
         component="img"
         alt="green iguana"
